@@ -4,7 +4,12 @@ function hsubmit(e) {
   e.preventDefault();
   const namee = document.getElementById("name").value;
   const email = document.getElementById("email").value;
+  let obj = {
+    name: namee,
+    email: email,
+  };
+  const jsonForm = JSON.stringify(obj);
 
-  localStorage.setItem("name", namee);
-  localStorage.setItem("email", email);
+  localStorage.setItem("data", jsonForm);
+  console.log(localStorage.getItem("data"));
 }
