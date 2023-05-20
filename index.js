@@ -81,3 +81,5 @@ function filterItems(e) {
     }
   });
 }
+localStorage.setItem("name", "ershad");
+console.log(localStorage.getItem("name"));
