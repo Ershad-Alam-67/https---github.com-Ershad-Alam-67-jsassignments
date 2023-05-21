@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+
+  justify-content: center;
+  background-color: rgb(162, 182, 182);
+  background-clip: content-box;
+  padding: 10px;
+}
+.container {
+  padding-right: 10em;
+  padding-left: 10em;
+}
+form {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.form-group {
+  padding: 10px;
+}
+.bn {
+  display: flex;
+  margin-left: 724px;
+}
