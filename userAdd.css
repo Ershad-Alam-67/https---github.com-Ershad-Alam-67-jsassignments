@@ -22,3 +22,6 @@ form {
   display: flex;
   margin-left: 724px;
 }
+#delete {
+  float: right;
+}

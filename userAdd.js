@@ -10,7 +10,16 @@ function fun(e) {
   li.appendChild(document.createTextNode(nam + "-" + mail + "-" + phn));
   const ul = document.getElementById("ul");
   li.setAttribute("class", "list-group-item");
+  const del = document.createElement("input");
+  del.setAttribute("class", "btn btn-primary delete");
+
+  del.setAttribute("id", "delete");
+  del.setAttribute("type", "button");
+  del.setAttribute("value", "delete");
+  del.setAttribute("onclick", "funDel(event)");
+  li.appendChild(del);
   ul.appendChild(li);
+
   let obj = {
     name: nam,
     email: mail,
@@ -18,4 +27,13 @@ function fun(e) {
   };
   const jso = JSON.stringify(obj);
   localStorage.setItem(mail, jso);
+}
+
+function funDel(event) {
+  event.preventDefault();
+  const ul = document.getElementById("ul");
+  const key = event.target.parentNode.textContent;
+  const ar = key.split("-");
+  localStorage.removeItem(ar[1]);
+  ul.removeChild(event.target.parentNode);
 }
